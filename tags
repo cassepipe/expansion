@@ -5,11 +5,34 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	//
+DOLLAR	expansion.h	/^#define DOLLAR /;"	d
+DOUBLE_QUOTE	expansion.h	/^#define DOUBLE_QUOTE /;"	d
+ENDCOLOR	minishell.h	/^# define ENDCOLOR /;"	d
+ERROR_SYNTAX	minishell.h	/^# define ERROR_SYNTAX /;"	d
+EXIT_UNK_CMD	minishell.h	/^# define EXIT_UNK_CMD /;"	d
+EXPANSION_H	expansion.h	/^#define EXPANSION_H$/;"	d
+FALSE	libft.h	/^# define FALSE /;"	d
+HEADER	minishell.h	/^# define HEADER /;"	d
+IN_FILE	minishell.h	/^# define IN_FILE /;"	d
+IN_HEREDOC	minishell.h	/^# define IN_HEREDOC /;"	d
+LIBFT_H	libft.h	/^# define LIBFT_H$/;"	d
+MINISHELL_H	minishell.h	/^#define MINISHELL_H$/;"	d
+OUT_APPEND	minishell.h	/^# define OUT_APPEND /;"	d
+OUT_REWRITE	minishell.h	/^# define OUT_REWRITE /;"	d
+PATH_MAX	minishell.h	/^# define PATH_MAX /;"	d
+PROMPT	minishell.h	/^# define PROMPT /;"	d
+QUOTE_SPLITTING_H	quote_splitting.h	/^#define QUOTE_SPLITTING_H$/;"	d
+RED	minishell.h	/^# define RED /;"	d
+REPROMPT	minishell.h	/^# define REPROMPT /;"	d
+TRUE	libft.h	/^# define TRUE /;"	d
+T_STRLIST_H	t_strlist.h	/^#define T_STRLIST_H$/;"	d
+_GNU_SOURCE	minishell.h	/^# define _GNU_SOURCE /;"	d
 __anon1e6f912b0108	get_built_in.c	/^static const struct {$/;"	s	file:
 _next_any_quote	quote_preserving_split.c	/^static char *_next_any_quote(char *str)$/;"	f	typeref:typename:char *	file:
 append_node_to_strlist	t_strlist.c	/^void	append_node_to_strlist(t_strlist *list, t_strlist_node *node)$/;"	f	typeref:typename:void
 append_str_to_strlist	t_strlist.c	/^int	append_str_to_strlist(t_strlist *list, char *str)$/;"	f	typeref:typename:int
 append_strarray_to_strlist	t_strlist.c	/^int	append_strarray_to_strlist(t_strlist *list, char **strarray)$/;"	f	typeref:typename:int
+args	minishell.h	/^	char	**args;$/;"	m	struct:s_command	typeref:typename:char **
 cd	cd.c	/^int	cd(t_command *cmd, t_strlist *env)$/;"	f	typeref:typename:int
 check_command_syntax	error_handler.c	/^t_bool	check_command_syntax(t_command *head, char **msg, t_strlist *env)$/;"	f	typeref:typename:t_bool
 check_pipe_syntax	error_handler.c	/^t_bool	check_pipe_syntax(t_command *head, char **msg, t_strlist *env)$/;"	f	typeref:typename:t_bool
@@ -17,16 +40,23 @@ check_quotes	quote_preserving_split.c	/^int		check_quotes(char *str)$/;"	f	typer
 check_unexpected_token	error_handler.c	/^t_bool	check_unexpected_token(t_command *head, char **msg)$/;"	f	typeref:typename:t_bool
 close_extra_tubes	executor.c	/^void	close_extra_tubes(t_command *head, t_command *current)$/;"	f	typeref:typename:void
 close_fds	pipes_redir.c	/^void	close_fds(t_inout_fd *fds)$/;"	f	typeref:typename:void
+command	minishell.h	/^	char	*command;$/;"	m	struct:s_command	typeref:typename:char *
 command_delete_quotes	quotes_vars_parser.c	/^char	*command_delete_quotes(char *c)$/;"	f	typeref:typename:char *
 command_init	struct_utils.c	/^t_command	*command_init(char *c, bool p, char in, char out)$/;"	f	typeref:typename:t_command *
+content	libft.h	/^	void			*content;$/;"	m	struct:s_list	typeref:typename:void *
 cut_all_commands	input_to_str.c	/^char    **cut_all_commands(char **com, char *s, int *i)$/;"	f	typeref:typename:char **
 cut_command	input_to_str.c	/^char    *cut_command(char *s, int *start, int *end)$/;"	f	typeref:typename:char *
 deinit_strlist	t_strlist.c	/^void	deinit_strlist(t_strlist *list)$/;"	f	typeref:typename:void
 delete_tmpfiles	struct_utils.c	/^void	delete_tmpfiles(t_command *head)$/;"	f	typeref:typename:void
 diralloc	split_unquoted_whitespace.c	/^static char	**diralloc(const char *s, char *set)$/;"	f	typeref:typename:char **	file:
+done	expansion.h	/^	done,$/;"	e	enum:e_expand_state
+double_quote	quote_splitting.h	/^	double_quote,$/;"	e	enum:e_quote_state
 dq_mode	quote_preserving_split.c	/^enum e_quote_state	dq_mode(char *str, int *i, int **table)$/;"	f	typeref:enum:e_quote_state
+e_expand_state	expansion.h	/^enum e_expand_state {$/;"	g
+e_quote_state	quote_splitting.h	/^enum e_quote_state {$/;"	g
 echo	echo.c	/^int	echo(t_command *cmd, t_strlist *env)$/;"	f	typeref:typename:int
 env	env.c	/^int	env(t_command *cmd, t_strlist *env)$/;"	f	typeref:typename:int
+envp	t_strlist.h	/^	char			**envp;$/;"	m	struct:s_strlist	typeref:typename:char **
 exec_com	executor.c	/^void	exec_com(t_command *head, t_command *c, t_strlist *env)$/;"	f	typeref:typename:void
 execute_pipeline	executor.c	/^int	execute_pipeline(t_command *head, t_strlist *env)$/;"	f	typeref:typename:int
 expand_arg	expand.c	/^char	*expand_arg(char *to_exp, int *indexes, t_strlist *env)$/;"	f	typeref:typename:char *
@@ -36,6 +66,7 @@ expand_simple_command	main.c	/^char **expand_simple_command(char *simple_command
 find_command	parsing.c	/^char	*find_command(char **envp, t_command *c)$/;"	f	typeref:typename:char *
 find_strlist_node_varvalue	t_strlist.c	/^char	*find_strlist_node_varvalue(t_strlist *list, char *name)$/;"	f	typeref:typename:char *
 find_syntax_errors	error_handler.c	/^t_command   *find_syntax_errors(t_command *head, t_strlist *env)$/;"	f	typeref:typename:t_command *
+fini	quote_splitting.h	/^	fini,$/;"	e	enum:e_quote_state
 free_commands	struct_utils.c	/^t_command	*free_commands(t_command *c)$/;"	f	typeref:typename:t_command *
 free_dir_and_set_to_null	split_unquoted_whitespace.c	/^static void	free_dir_and_set_to_null(char ***dir, long i)$/;"	f	typeref:typename:void	file:
 free_str_array_and_set_to_null	simple_commands_split.c	/^static void	free_str_array_and_set_to_null(char ***dir, long i)$/;"	f	typeref:typename:void	file:
@@ -63,6 +94,10 @@ get_len_non_expandable_from_indexes	expand.c	/^int	get_len_non_expandable_from_i
 get_next_arg	utils.c	/^char	*get_next_arg(char *s, int *i, int *z)$/;"	f	typeref:typename:char *
 get_strlist_total_len	t_strlist.c	/^int	get_strlist_total_len(t_strlist strlist)$/;"	f	typeref:typename:int
 handle_quotes	quotes_remover.c	/^char	**handle_quotes(char **strarray)$/;"	f	typeref:typename:char **
+head	t_strlist.h	/^	t_strlist_node	*head;$/;"	m	struct:s_strlist	typeref:typename:t_strlist_node *
+in_fd	minishell.h	/^	int	in_fd;$/;"	m	struct:s_inout_fd	typeref:typename:int
+in_mode	minishell.h	/^	char	in_mode;$/;"	m	struct:s_command	typeref:typename:char
+in_var	expansion.h	/^	in_var,$/;"	e	enum:e_expand_state
 in_var_mode	expand.c	/^enum e_expand_state	in_var_mode(char *str, int *i, int **table)$/;"	f	typeref:enum:e_expand_state
 init_strlist	t_strlist.c	/^t_strlist	init_strlist()$/;"	f	typeref:typename:t_strlist
 init_strlist_node	t_strlist.c	/^t_strlist_node	init_strlist_node()$/;"	f	typeref:typename:t_strlist_node
@@ -71,6 +106,7 @@ is_single_dollar	expand.c	/^bool	is_single_dollar(char *c)$/;"	f	typeref:typenam
 is_special_var_start_char	expand.c	/^bool	is_special_var_start_char(int c)$/;"	f	typeref:typename:bool
 is_valid_env_var_char	expand.c	/^bool	is_valid_env_var_char(int c)$/;"	f	typeref:typename:bool
 is_valid_shellvar_start_char	expand.c	/^bool	is_valid_shellvar_start_char(int c)$/;"	f	typeref:typename:bool
+len	t_strlist.h	/^	int		len;$/;"	m	struct:s_strlist_node	typeref:typename:int
 log_index	expand.c	/^static void	log_index(int i, int **table)$/;"	f	typeref:typename:void	file:
 log_index	quote_preserving_split.c	/^static void	log_index(int i, int **table)$/;"	f	typeref:typename:void	file:
 main	main.c	/^int main(int ac, char **av, char **envp)$/;"	f	typeref:typename:int
@@ -78,6 +114,9 @@ make_strlist_from_null_terminated_str_array	t_strlist.c	/^t_strlist	*make_strlis
 name	get_built_in.c	/^	char	*name;$/;"	m	struct:__anon1e6f912b0108	typeref:typename:char *	file:
 new_strlist	t_strlist.c	/^t_strlist *new_strlist()$/;"	f	typeref:typename:t_strlist *
 new_strlist_node	t_strlist.c	/^t_strlist_node *new_strlist_node()$/;"	f	typeref:typename:t_strlist_node *
+next	libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
+next	minishell.h	/^	struct s_command *next;$/;"	m	struct:s_command	typeref:struct:s_command *
+next	t_strlist.h	/^	struct s_strlist_node *next;$/;"	m	struct:s_strlist_node	typeref:struct:s_strlist_node *
 next_any_quote	quote_preserving_split.c	/^int	next_any_quote(char *str, int i)$/;"	f	typeref:typename:int
 next_double_quote	quote_preserving_split.c	/^int	next_double_quote(char *str, int i)$/;"	f	typeref:typename:int
 next_non_env_var	expand.c	/^int	next_non_env_var(char *str, int i)$/;"	f	typeref:typename:int
@@ -87,10 +126,18 @@ next_single_quote	quote_preserving_split.c	/^int	next_single_quote(char *str, in
 next_var	expand.c	/^int	next_var(char *str, int i)$/;"	f	typeref:typename:int
 next_word	simple_commands_split.c	/^static const char	*next_word(const char *str, char *set, bool quotes[2])$/;"	f	typeref:typename:const char *	file:
 next_word	split_unquoted_whitespace.c	/^static const char	*next_word(const char *str, char *set, bool quotes[2])$/;"	f	typeref:typename:const char *	file:
+normal	expansion.h	/^	normal,$/;"	e	enum:e_expand_state
 normal_mode	expand.c	/^enum e_expand_state	normal_mode(char *str, int *i, int **table)$/;"	f	typeref:enum:e_expand_state
+not_in_quote	quote_splitting.h	/^	not_in_quote,$/;"	e	enum:e_quote_state
 not_in_quote_mode	quote_preserving_split.c	/^enum e_quote_state	not_in_quote_mode(char *str, int *i, int **table)$/;"	f	typeref:enum:e_quote_state
+out_fd	minishell.h	/^	int out_fd;$/;"	m	struct:s_inout_fd	typeref:typename:int
+out_mode	minishell.h	/^	char	out_mode;$/;"	m	struct:s_command	typeref:typename:char
 parse_command_args	str_to_struct.c	/^char	**parse_command_args(char *command)$/;"	f	typeref:typename:char **
 parse_quotes_vars	quotes_vars_parser.c	/^t_bool	parse_quotes_vars(t_command *c, t_strlist *env)$/;"	f	typeref:typename:t_bool
+path_to_bin	minishell.h	/^	char	*path_to_bin;$/;"	m	struct:s_command	typeref:typename:char *
+pipe	minishell.h	/^	bool	pipe;$/;"	m	struct:s_command	typeref:typename:bool
+prev	minishell.h	/^	struct s_command *prev;$/;"	m	struct:s_command	typeref:struct:s_command *
+prev	t_strlist.h	/^	struct s_strlist_node *prev;$/;"	m	struct:s_strlist_node	typeref:struct:s_strlist_node *
 print_strarray	main.c	/^void	print_strarray(char **com)$/;"	f	typeref:typename:void
 print_strlist	t_strlist.c	/^void	print_strlist(t_strlist list)$/;"	f	typeref:typename:void
 pwd	pwd.c	/^int	pwd(t_command *cmd, t_strlist *env)$/;"	f	typeref:typename:int
@@ -108,8 +155,14 @@ replace_varname_by_values	quotes_vars_parser.c	/^void	replace_varname_by_values(
 reset_sigint	signals.c	/^void	reset_sigint()$/;"	f	typeref:typename:void
 reset_signals	signals.c	/^void	reset_signals()$/;"	f	typeref:typename:void
 reset_sigquit	signals.c	/^void	reset_sigquit()$/;"	f	typeref:typename:void
+ret	t_strlist.h	/^	int				ret;$/;"	m	struct:s_strlist	typeref:typename:int
 run_childs	executor.c	/^void	run_childs(t_command *head, t_strlist *env)$/;"	f	typeref:typename:void
 s_built_in_table	get_built_in.c	/^} s_built_in_table[] = {$/;"	v	typeref:typename:const struct __anon1e6f912b0108[]
+s_command	minishell.h	/^typedef struct s_command$/;"	s
+s_inout_fd	minishell.h	/^typedef struct s_inout_fd$/;"	s
+s_list	libft.h	/^typedef struct s_list$/;"	s
+s_strlist	t_strlist.h	/^typedef struct s_strlist {$/;"	s
+s_strlist_node	t_strlist.h	/^typedef struct s_strlist_node {$/;"	s
 set_command_args	str_to_struct.c	/^void	set_command_args(t_command *c, char *s, int y)$/;"	f	typeref:typename:void
 set_command_list_tube	str_to_struct.c	/^t_command	*set_command_list_tube(t_command *head)$/;"	f	typeref:typename:t_command *
 set_command_redir	parsing.c	/^void	set_command_redir(t_command *c, char *s)$/;"	f	typeref:typename:void
@@ -117,20 +170,32 @@ set_in_path	pipes_redir.c	/^int	set_in_path(t_command *head, t_command *c, int o
 set_input_pattern	input_to_str.c	/^void	set_input_pattern(char **s)$/;"	f	typeref:typename:void
 set_out_path	pipes_redir.c	/^int	set_out_path(t_command *c, int old_fd)$/;"	f	typeref:typename:int
 set_quote_mode	simple_commands_split.c	/^static void	set_quote_mode(const char *c, bool *q)$/;"	f	typeref:typename:void	file:
-set_quote_mode	split_unquoted_whitespace.c	/^static void	set_quote_mode(const char *c, bool *q)$/;"	f	typeref:typename:void	file:
+set_quote_mode	split_unquoted_whitespace.c	/^static void	set_quote_mode(const char c, bool *q)$/;"	f	typeref:typename:void	file:
 set_quotes	parsing.c	/^void	set_quotes(char c, bool *q, bool *dq)$/;"	f	typeref:typename:void
 set_redirections	pipes_redir.c	/^t_inout_fd *set_redirections(t_command *c, t_command *head, t_strlist *env)$/;"	f	typeref:typename:t_inout_fd *
 set_signal_handling	signals.c	/^void set_signal_handling()$/;"	f	typeref:typename:void
 set_tubes_path	pipes_redir.c	/^void    set_tubes_path(t_command *head, t_command *c)$/;"	f	typeref:typename:void
 sigint_handler	signals.c	/^void	sigint_handler(int signal)$/;"	f	typeref:typename:void
+single_quote	quote_splitting.h	/^	single_quote,$/;"	e	enum:e_quote_state
+size	t_strlist.h	/^	size_t			size;$/;"	m	struct:s_strlist	typeref:typename:size_t
 split_on_unquoted_redir	simple_commands_split.c	/^char	**split_on_unquoted_redir(char const *s, char *set)$/;"	f	typeref:typename:char **
 split_on_unquoted_whitespace	split_unquoted_whitespace.c	/^char	**split_on_unquoted_whitespace(char const *s, char *set)$/;"	f	typeref:typename:char **
 sq_mode	quote_preserving_split.c	/^enum e_quote_state	sq_mode(char *str, int *i, int **table)$/;"	f	typeref:enum:e_quote_state
+str	t_strlist.h	/^	char	*str;$/;"	m	struct:s_strlist_node	typeref:typename:char *
 strarray_alloc	simple_commands_split.c	/^static char	**strarray_alloc(const char *s, char *set)$/;"	f	typeref:typename:char **	file:
 strarray_alloc_from_index_table	quote_preserving_split.c	/^static char	**strarray_alloc_from_index_table(int *index_table)$/;"	f	typeref:typename:char **	file:
+t_bool	libft.h	/^typedef int	t_bool;$/;"	t	typeref:typename:int
+t_command	minishell.h	/^}	t_command;$/;"	t	typeref:struct:s_command
+t_inout_fd	minishell.h	/^}	t_inout_fd;$/;"	t	typeref:struct:s_inout_fd
+t_list	libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
+t_sigaction	minishell.h	/^typedef struct sigaction t_sigaction;$/;"	t	typeref:struct:sigaction
+t_strlist	t_strlist.h	/^} t_strlist;$/;"	t	typeref:struct:s_strlist
+t_strlist_node	t_strlist.h	/^}	t_strlist_node;$/;"	t	typeref:struct:s_strlist_node
 try_to_execute	executor.c	/^int	try_to_execute(t_command *c, t_strlist *env)$/;"	f	typeref:typename:int
+tube	minishell.h	/^	int		*tube;$/;"	m	struct:s_command	typeref:typename:int *
 unset	unset.c	/^int	unset(t_command *cmd, t_strlist *env)$/;"	f	typeref:typename:int
 update_strlist_envp	t_strlist.c	/^int			update_strlist_envp(t_strlist *list)$/;"	f	typeref:typename:int
+var_start	expansion.h	/^	var_start,$/;"	e	enum:e_expand_state
 var_start_mode	expand.c	/^enum e_expand_state	var_start_mode(char *str, int *i, int **table)$/;"	f	typeref:enum:e_expand_state
 xit	exit.c	/^int	xit(t_command *cmd, t_strlist *env)$/;"	f	typeref:typename:int
 xport	export.c	/^int	xport(t_command *cmd, t_strlist *env)$/;"	f	typeref:typename:int
